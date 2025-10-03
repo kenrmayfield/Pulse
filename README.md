@@ -6,6 +6,8 @@
 
 **Real-time monitoring for Proxmox VE and PBS with alerts, webhooks, and a clean web interface.**
 
+**[Try the live demo →](https://demo.pulserelay.pro)** (read-only with mock data)
+
 ![Pulse Dashboard](docs/images/01-dashboard.webp)
 
 ## Key Features
