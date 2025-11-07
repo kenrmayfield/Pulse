@@ -80,6 +80,21 @@ curl -fsSL https://raw.githubusercontent.com/rcourtman/Pulse/main/scripts/instal
    - User: `pulse@pam` (not the token!)
    - Role: `PVEAuditor`
    - Propagate: Checked
+  
+### Pulse Permissions
+
+Pulse needs the right permissions to query the guest agent:
+
+**Proxmox VE 8 and below:**
+- Requires `VM.Monitor` for guest agent access
+- `Sys.Audit` adds Ceph/cluster metrics and is applied when available
+- Pulse setup script creates a `PulseMonitor` role with these privileges automatically
+
+**Proxmox VE 9+:**
+- Requires `VM.GuestAgent.Audit` for guest agent access
+- `Sys.Audit` remains recommended for Ceph/cluster metrics
+- Pulse setup script applies both via the `PulseMonitor` role (even if `PVEAuditor` lacks them)
+
    
    ✅ Monitors: VMs, containers, nodes, storage usage, PBS backups, snapshots  
    ❌ Cannot see: PVE storage backup files (.vma)
