@@ -90,6 +90,7 @@ curl -fsSL https://raw.githubusercontent.com/rcourtman/Pulse/main/scripts/instal
    - User: `pulse@pam`
    - Role: `PVEDatastoreAdmin`
    - Propagate: Checked
+   NOTE: Make sure to have SYS.AUDIT for Permissions.
    
    ✅ Everything from Secure Mode + PVE storage backups  
    ⚠️ Token can create/delete datastores (Proxmox API limitation)
